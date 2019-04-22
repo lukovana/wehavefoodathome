@@ -1,0 +1,17 @@
+.quotesSection{
+  padding-top: 150px;
+  height: 400px;
+  width: 60%;
+  color: #333;
+}
+
+.quoteText{
+  -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+   -moz-animation: fadein 3s; /* Firefox < 16 */
+    animation: fadein 3s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}

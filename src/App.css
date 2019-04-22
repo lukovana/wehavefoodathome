@@ -1,0 +1,11 @@
+.main {
+  background-color: #fff;
+  display: grid;
+  grid-template-areas: 
+          "title    title"
+          "fridge   recipe";
+  font-size: calc(10px + 2vmin);
+  color: white;
+  margin: 2em;
+  text-align: center;
+}
