@@ -73,5 +73,3 @@ def userIngredient():
 def randomRecipe(recipeFirst, recipeLast):
    index = randint(recipeFirst, recipeLast)
    return index
-
-getRecipe()
