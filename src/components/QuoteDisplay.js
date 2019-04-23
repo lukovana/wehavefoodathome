@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import './css/QuoteDisplay.css' // Styling component with external CSS
 
-
-
 class QuoteDisplay extends Component {
 
     // Initialize state of component
@@ -10,8 +8,6 @@ class QuoteDisplay extends Component {
     state = {
       loading: true
     }
-
-    
 
   // Asynchronous function gets quote from backend or API then changes the state of component when quote has been obtained
   async componentDidMount(){

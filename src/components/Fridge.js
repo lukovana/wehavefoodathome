@@ -1,20 +1,16 @@
-import React from 'react'
-const fridgeStyle = {
-    width: "550px",
-    height: "500px",
-    backgroundColor: "#ff00da",
-    gridArea: "fridge",
-    marginRight: "auto"
-}
+import React from 'react';
+import './css/componentCSS.css'
 
 const Fridge = () => {
     return (
         // must figure out where to send the data to .. post ?? right ?? 
         // and must send it over to the backend somehow
-        <div style={fridgeStyle}>
-
-            <form method="POST" action="">
-                <label>Ingredient: </label><input name="ingredient" type="text" placeholder="Cauliflower"></input>
+        <div className = "fridgeStyle">
+            <p>Enter the ingredients separated by a comma (ingredient, ingredient, ingredient)</p>
+            <form method="POST" action="http://ss1.ciwcertified.com/cgi-bin/process.pl">
+                <label>Ingredient: </label><input type="text" name="ingredient"/> 
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
             </form>
         
         </div>
