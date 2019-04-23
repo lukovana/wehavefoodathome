@@ -3,6 +3,7 @@
 #     (line 75) input validation
 from recipeRetreival import *
 from random import *
+import app
 
 def getRecipe():
 
@@ -18,7 +19,9 @@ def getRecipe():
    #  this is probably gonna change if we are getting
    #  the input from react
    #
-   userList = userIngredient()
+   ###userList = userIngredient()
+
+   userList = ['celery', 'potato', 'apple', 'onion']
 
    # Retrieve the recipes needed for the ingredients the user entered.
    for ingredient in userList:
@@ -45,24 +48,24 @@ def getRecipe():
 #
 #  RETURNS: list of ingredients
 #
-def userIngredient():
+# def userIngredient():
    
-   # Initialize variables and lists
-   choice = "no"
-   ulist = []
-   counter = 0
+#    # Initialize variables and lists
+#    choice = "no"
+#    ulist = []
+#    counter = 0
    
-   # Prompts user to enter an ingredient until they are satisfied.
-   # It's possible that the way the loop is driven will change
-   while (choice[0] != "n" or choice[0] != "N"):
-      ingredient = input("Enter ingredient: ")
-      ulist.append(ingredient)
-      choice = input("Do you have any more to enter? (Y/N): ")
+#    # Prompts user to enter an ingredient until they are satisfied.
+#    # It's possible that the way the loop is driven will change
+#    while (choice[0] != "n" or choice[0] != "N"):
+#       ingredient = input("Enter ingredient: ")
+#       ulist.append(ingredient)
+#       choice = input("Do you have any more to enter? (Y/N): ")
       
-      if choice[0] == "n" or choice[0] == "N":
-         break
+#       if choice[0] == "n" or choice[0] == "N":
+#          break
 
-   return ulist
+#    return ulist
 
 #  def randomRecipe(recipeFirst, recipeLast)
 #  Generates a single random recipe from a list

@@ -59,6 +59,6 @@ def processRecipe(url, tag, attribute, content):
    soop = BeautifulSoup(page, 'html.parser')
 
    recipe_elmt = soop.find(tag, attrs={attribute: content})
-   recipe = recipe_elmt.text.strip()
+   ##recipe = recipe_elmt.text.strip()
 
-   return recipe
+   return recipe_elmt
