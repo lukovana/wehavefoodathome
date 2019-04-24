@@ -10,24 +10,23 @@ def getRecipe():
    # Initialize iterator
    i = 0
 
-   # Initialize recipe list
+   # Initialize lists
    recipeList = []
+   ###ingredientList = []
 
-   # WIP # WIP # WIP # WIP # WIP # WIP #
-   # Have the user enter ingredients into a list
-   #
-   #  this is probably gonna change if we are getting
-   #  the input from react
-   #
-   ###userList = userIngredient()
+   ingredients = app.inputList()
+   ingredientList = ingredients.split(", ")
+   
+   ###for item in ingredientList:
+   ###   ingredientList[item] = ingredients[item]
 
-   userList = ['celery', 'potato', 'apple', 'onion']
+   ###userList = ['celery', 'potato', 'apple', 'onion']
 
    # Retrieve the recipes needed for the ingredients the user entered.
-   for ingredient in userList:
+   for item in ingredientList:
 
       # Collects all possible recipes for the user's query into a list
-      recipes = findRecipe(ingredient, userList)
+      recipes = findRecipe(item, ingredientList)
 
       for i in range(len(recipes)):
          # Parses the HTML from the recipe websites into text
@@ -43,30 +42,6 @@ def getRecipe():
 
    return recipeList[randIdx]
 
-#  userIngredient()
-#  Prompts user to enter ingredients
-#
-#  RETURNS: list of ingredients
-#
-# def userIngredient():
-   
-#    # Initialize variables and lists
-#    choice = "no"
-#    ulist = []
-#    counter = 0
-   
-#    # Prompts user to enter an ingredient until they are satisfied.
-#    # It's possible that the way the loop is driven will change
-#    while (choice[0] != "n" or choice[0] != "N"):
-#       ingredient = input("Enter ingredient: ")
-#       ulist.append(ingredient)
-#       choice = input("Do you have any more to enter? (Y/N): ")
-      
-#       if choice[0] == "n" or choice[0] == "N":
-#          break
-
-#    return ulist
-
 #  def randomRecipe(recipeFirst, recipeLast)
 #  Generates a single random recipe from a list
 #  of recipes
@@ -76,3 +51,5 @@ def getRecipe():
 def randomRecipe(recipeFirst, recipeLast):
    index = randint(recipeFirst, recipeLast)
    return index
+
+getRecipe()

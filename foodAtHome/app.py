@@ -7,9 +7,9 @@ CORS(website)
 
 # this is where we get the list of ingredients from the user  ??? myaeb
 @website.route("/input", methods = ['GET', 'POST'])
-def input_list():
-    if request.method == 'POST':
-        return 'Submitted.'
+def inputList():
+    ingredient = request.form['ingredient']
+    return ingredient
 
 @website.route("/test")
 def index():
